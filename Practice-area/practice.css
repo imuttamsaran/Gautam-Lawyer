@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.content-section-outer {
+    max-width: 1550px;
+    padding: 20px;
+    margin: 80px auto 0 auto;
+}
+
+.content-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-content-section {
+    text-align: left;
+    flex: 60%;
+}
+
+.left-content-section p:not(.summary) {
+    margin-left: 10px;
+
+}
+
+.left-content-section .summary {
+    font-size: clamp(0.7rem, 1vw + 1rem, 1.1rem);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.left-content-section .area-head {
+    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.left-content-section p {
+    font-size: clamp(0.5rem, 1vw + 1rem, 1rem);
+    margin: 10px 0px;
+    line-height: 28px;
+}
+
+.left-content-section .point-head h1 {
+    font-size: clamp(0.7rem, 1vw + 1rem, 1.5rem);
+    text-transform: uppercase;
+    margin: 15px 0 -10px 10px;
+}
+
+.center-sec {
+    flex: 10%;
+}
+
+.right-content-section {
+    background-color: var(--bg-second-color);
+    flex: 30%;
+    padding: 20px;
+    height: fit-content;
+}
+
+.right-content-section ul li {
+    list-style: none;
+    height: 45px;
+    margin: 7px 0px;
+}
+
+.right-content-section ul li {
+    border-bottom: 2px dotted var(--secondary-color);
+}
+
+.right-content-section ul li a {
+    text-decoration: none;
+    color: var(--cta-color);
+    font-weight: 500;
+    font-size: clamp(0.7rem, 1vw + 1rem, 1rem);
+}
+
+.right-content-section ul li a:hover {
+    color: var(--cta-hover);
+}
+
+@media screen and (max-width: 768px) {
+    .content-sections {
+        flex-direction: column;
+    }
+
+    .center-sec {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 1050px) and (min-width: 768px) {
+    .left-content-section {
+        flex: 70%;
+    }
+
+    .center-sec {
+        flex: 5%;
+    }
+
+    .right-content-section {
+        flex: 25%;
+    }
+}
