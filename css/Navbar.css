@@ -4,8 +4,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #fffbf9;
+    --bg-second-color: #fff5f1;
+    --box-color: #f8f6f5;
+    --text-white: #f3f3f3;
+    --primary-color: #262624;
+    --secondary-color: #414140;
+    --hover-color: #646464;
+    --cta-color: #d47c42;
+    --cta-hover: #96582e;
+}
 nav {
-    background-color: #fff0df;
+    background-color: var(--background-color);
     width: 100%;
     position: fixed;
     top: 0;
@@ -48,7 +59,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #e3c725c2;
+    color: var(--cta-hover);
 }
 
 .nav-links li {
@@ -56,9 +67,10 @@ nav {
 }
 
 .nav-links li:last-child {
-    background-color: #e3c725c2;
-    border: 1px solid #e3c725c2;
+    background-color: var(--cta-hover);
+    border: 1px solid var(--cta-hover);
     transition: 0.1s ease;
+    cursor: pointer;
 }
 
 .nav-links li:last-child a::before {
@@ -67,9 +79,12 @@ nav {
 
 .nav-links li:last-child:hover {
     background-color: transparent;
-    border: 1px solid #e3c725c2;
+    border: 1px solid var(--cta-hover);
 }
 
+.nav-links li:last-child a {
+    color: var(--text-white);
+}
 .nav-links li:last-child:hover a {
     color: #000000;
 }
@@ -79,9 +94,9 @@ nav {
     display: block;
     height: 3px;
     width: 0%;
-    background-color: #e3c725c2;
+    background-color: var(--cta-hover);
     position: absolute;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 0.1s;
     margin: 0 0 0 10%;
 }
 
@@ -131,7 +146,7 @@ nav {
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 1s ease-out;
+        transition: all 0.1s ease-out;
         pointer-events: none;
     }
 
@@ -147,6 +162,7 @@ nav {
 
     .nav-links li {
         opacity: 0;
+        line-height: 45px;
     }
 
     .nav-links li:nth-child(1) {
@@ -170,14 +186,11 @@ nav {
     }
 
     .nav-links li:nth-child(6) {
-        transition: all 0.5s ease 0.9s;
+        transition: all 0.1s ease 0.1s;
         margin: 0;
     }
 
-    .nav-links li:nth-child(7) {
-        transition: all 0.5s ease 1s;
-        margin: 0;
-    }
+
 
     li.fade {
         opacity: 1;
@@ -194,14 +207,14 @@ nav {
 
 /*Animating Hamburger Icon on Click*/
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-1px, 6px);
 }
 
 .toggle .line2 {
-    transition: all 0.7s ease;
+    transition: all 0.4s ease;
     width: 0;
 }
 
 .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-1px, -6px);
 }
