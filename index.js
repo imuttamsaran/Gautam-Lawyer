@@ -14,6 +14,7 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle("toggle");
 });
 
+// hide nav on click outside of box
 
 //........... Counter  
 let section_counter = document.querySelector('#section_counter');
@@ -165,4 +166,3 @@ window.onload = function () {
     })
 }
 
-// case studies by lawyer
