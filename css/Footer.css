@@ -6,6 +6,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #fffbf9;
+    --bg-second-color: #fff5f1;
+    --box-color: #f8f6f5;
+    --text-white: #f3f3f3;
+    --primary-color: #262624;
+    --secondary-color: #414140;
+    --hover-color: #646464;
+    --cta-color: #d47c42;
+    --cta-hover: #96582e;
+}
 body {
     min-height: 100vh;
     width: 100%;
@@ -162,7 +173,7 @@ footer .content .link-boxes .box {
 
 .content .link-boxes .box li a:hover {
     opacity: 1;
-    color: #b58e00;
+    color: var(--cta-hover);
 }
 
 .content .link-boxes .input-box {
@@ -200,7 +211,7 @@ footer .content .link-boxes .box {
 }
 
 .input-box input[type="button"]:hover {
-    background-color: #b58e00;
+    background-color: var(--cta-color);
     color: #fff;
 }
 
