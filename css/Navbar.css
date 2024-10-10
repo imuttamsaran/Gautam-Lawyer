@@ -15,6 +15,7 @@
     --cta-color: #d47c42;
     --cta-hover: #96582e;
 }
+
 nav {
     background-color: var(--background-color);
     width: 100%;
@@ -59,7 +60,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: var(--cta-hover);
+    color: var(--cta-color);
 }
 
 .nav-links li {
@@ -67,10 +68,13 @@ nav {
 }
 
 .nav-links li:last-child {
-    background-color: var(--cta-hover);
-    border: 1px solid var(--cta-hover);
+    background-color: var(--cta-color);
+    border: 1px solid var(--cta-color);
     transition: 0.1s ease;
     cursor: pointer;
+    padding: 10PX;
+    border-radius: 4PX;
+
 }
 
 .nav-links li:last-child a::before {
@@ -79,12 +83,13 @@ nav {
 
 .nav-links li:last-child:hover {
     background-color: transparent;
-    border: 1px solid var(--cta-hover);
+    border: 1px solid var(--cta-color);
 }
 
 .nav-links li:last-child a {
     color: var(--text-white);
 }
+
 .nav-links li:last-child:hover a {
     color: #000000;
 }
@@ -94,10 +99,10 @@ nav {
     display: block;
     height: 3px;
     width: 0%;
-    background-color: var(--cta-hover);
+    background-color: var(--cta-color);
     position: absolute;
     transition: all ease-in-out 0.1s;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 7%;
 }
 
 .nav-links li a:hover::before {
@@ -194,10 +199,11 @@ nav {
 
     li.fade {
         opacity: 1;
-        padding:10px 20px;
+        padding: 10px 20px;
         text-align: left;
 
     }
+
     .nav-links li a::before {
         margin: 0 0 0 0%;
         text-align: left;
