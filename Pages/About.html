@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abou Me</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/82f22d047e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/Home.css">
     <link rel="stylesheet" href="/css/Navbar.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/Home.css">
     <script src="/index.js" type="text/javascript" defer></script>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
+
         body {
             background-color: var(--background-color);
         }
@@ -30,7 +31,24 @@
                 flex-direction: column-reverse;
             }
         }
+
+        .container-contact {
+            padding: 100px auto;
+        }
+
+        input::placeholder {
+            font-weight: normal;
+            opacity: 1;
+            color: #ffffff;
+        }
+
+        textarea::placeholder {
+            font-weight: normal;
+            opacity: 1;
+            color: #ffffff;
+        }
     </style>
+
 </head>
 
 <body>
@@ -88,12 +106,76 @@
                 </p>
             </div>
         </div>
+        <div class="container-contact">
+            <div class="headings-section">
+                <h1>Contact us</h1>
+            </div>
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="title">Let's get in touch</h3>
+                    <p class="text">
+                        Please note that contacting us via this page does not create an attorney-client relationship.
+                        <br>
+                        <b>Thank you.</b>
+                    </p>
+
+                    <div class="info">
+                        <div class="information">
+                            <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
+
+                            <p>South Avenue, Mopa Road, Mapusa, Goa</p>
+                        </div>
+                        <div class="information">
+                            <i class="fas fa-envelope"></i> &nbsp &nbsp
+                            <p>Contact@yourwebsite.com</p>
+                        </div>
+                        <div class="information">
+                            <i class="fas fa-phone"></i>&nbsp&nbsp
+                            <p>+11-2355-3345-5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+
+                    <form autocomplete="on" method="POST" id="form">
+                        <h3 class="title">Contact us</h3>
+                        <input type="hidden" name="access_key" value="b66f2f59-bc45-498e-9979-9b65e447fb8d">
+                        <div class="input-container">
+                            <input type="text" name="name" class="input" required placeholder="Full Name" />
+                            <!-- <label for="">Full Name</label>
+                            <span>Full Name</span> -->
+                        </div>
+                        <div class="input-container">
+                            <input type="email" name="email" class="input" required placeholder="Email" />
+                            <!-- <label for="">Email</label>
+                            <span>Email</span> -->
+                        </div>
+                        <div class="input-container">
+                            <input type="tel" name="phone" class="input" maxlength="10" required pattern="[0-9]{10}"
+                                placeholder="Phone" />
+                            <!-- <label for="">Phone</label>
+                            <span>Phone</span> -->
+                        </div>
+                        <div class="input-container textarea">
+                            <textarea name="message" class="input" required minlength="10"
+                                placeholder="Message"></textarea>
+                            <!-- <label for="">Message</label>
+                            <span>Message</span> -->
+                        </div>
+                        <input type="submit" value="Send" class="btn" />
+                        <div id="result"> </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="content">
                 <div class="top">
                     <div class="logo-details">
                         <i class="fab fa-slack"> </i>
-                        <span class="logo_name">Law Firm</span>
+                        <span class="logo_name">Gautam</span>
                     </div>
                     <div class="media-icons">
                         <a href="#">
@@ -169,15 +251,6 @@
                             <a href="mailto:Contact@yourwebsite.com">Contact@yourwebsite.com</a>
                         </li>
                     </ul>
-                    <ul class="box input-box">
-                        <li class="link_name">Subscribe</li>
-                        <li>
-                            <input type="text" placeholder="Enter your email" />
-                        </li>
-                        <li>
-                            <input type="button" Value="Subscribe" />
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="bottom-details">
@@ -195,6 +268,7 @@
             </div>
         </footer>
     </div>
+
 </body>
 
 </html>
