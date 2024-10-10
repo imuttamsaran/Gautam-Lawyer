@@ -27,7 +27,7 @@ body {
 
 footer {
     position: relative;
-    background: #232325;
+    background: var(--secondary-color);
     width: 100%;
     bottom: 0;
     left: 0;
@@ -80,50 +80,16 @@ footer .content .top {
     transition: all 0.4s ease;
 }
 
-.top .media-icons a:nth-child(1) {
-    background: #4267B2;
+.top .media-icons a {
+    background: var(--cta-color);
 }
 
-.top .media-icons a:nth-child(1):hover {
-    color: #4267B2;
+.top .media-icons a:hover {
+    color: var(--primary-color);
     background: #fff;
 }
 
-.top .media-icons a:nth-child(2) {
-    background: #1DA1F2;
-}
 
-.top .media-icons a:nth-child(2):hover {
-    color: #1DA1F2;
-    background: #fff;
-}
-
-.top .media-icons a:nth-child(3) {
-    background: #E1306C;
-}
-
-.top .media-icons a:nth-child(3):hover {
-    color: #E1306C;
-    background: #fff;
-}
-
-.top .media-icons a:nth-child(4) {
-    background: #0077B5;
-}
-
-.top .media-icons a:nth-child(4):hover {
-    color: #0077B5;
-    background: #fff;
-}
-
-.top .media-icons a:nth-child(5) {
-    background: #FF0000;
-}
-
-.top .media-icons a:nth-child(5):hover {
-    color: #FF0000;
-    background: #fff;
-}
 
 footer .content .link-boxes {
     width: 100%;
@@ -173,7 +139,7 @@ footer .content .link-boxes .box {
 
 .content .link-boxes .box li a:hover {
     opacity: 1;
-    color: var(--cta-hover);
+    color: var(--cta-color);
 }
 
 .content .link-boxes .input-box {
